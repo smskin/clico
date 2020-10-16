@@ -31,7 +31,7 @@ class CliCo implements ICliCo
 	 * @param Models\LinkRequest $request
 	 * @return string
 	 * @throws Exceptions\ValidationException
-	 * @throws Exceptions\HttpException|GuzzleException
+	 * @throws Exceptions\HttpException
      */
 	public function singleLink(Models\LinkRequest $request): string
 	{
@@ -57,7 +57,7 @@ class CliCo implements ICliCo
 	 * @param Models\LinkRequest[] $requests
 	 * @return string[]
 	 * @throws Exceptions\ValidationException
-	 * @throws Exceptions\HttpException|GuzzleException
+	 * @throws Exceptions\HttpException
      */
 	public function multipleLinks(array $requests): array
 	{
@@ -88,7 +88,7 @@ class CliCo implements ICliCo
 	 * @param string $url
 	 * @param array $formData
 	 * @return ResponseInterface
-	 * @throws ClientException|GuzzleException
+	 * @throws ClientException
      */
 	private function post(string $url, array $formData){
 		return $this->getClient()->post(
