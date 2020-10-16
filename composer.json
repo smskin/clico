@@ -1,0 +1,33 @@
+{
+	"name": "smskin/clico",
+	"description": "PHP interface for cli.co url shorter service",
+	"keywords": ["laravel", "cli.co", "url", "shorter"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Sergey Mikhaylov",
+			"email": "serg@msoinvest.com"
+		}
+	],
+	"require": {
+		"php": ">=7.2",
+		"guzzlehttp/guzzle": "^6.3|^7.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"SMSkin\\CliCo\\": "src/"
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"extra": {
+		"laravel": {
+			"providers": [
+				"SMSkin\\CliCo\\ServiceProvider"
+			],
+			"aliases": {
+				"CliCo": "SMSkin\\CliCo\\Facade"
+			}
+		}
+	}
+}
